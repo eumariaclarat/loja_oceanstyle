@@ -4,284 +4,115 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ocean Style</title>
+<link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
-}
-
-body{
-background:#f0f6fb;
-}
-
-/* HEADER */
-.top-header{
-background:linear-gradient(90deg,#8be4dc,#1976d2);
-color:white;
-padding:15px 25px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-
-.logo-area h1{
-font-size:28px;
-}
-
-.logo-area p{
-font-size:14px;
-opacity:0.9;
-}
-
-.top-menu{
-display:flex;
-gap:25px;
-}
-
-.top-menu a{
-color:white;
-text-decoration:none;
-font-size:18px;
-padding:8px 12px;
-border-radius:6px;
-transition:0.3s;
-}
-
-.top-menu a:hover{
-background:#b2cee6;
-color:#000000;
-}
-
-.top-actions{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.search{
-padding:8px 15px;
-border-radius:20px;
-border:none;
-}
-
-.cart-icon{
-cursor:pointer;
-font-size:16px;
-background:white;
-color:#1976d2;
-padding:5px 10px;
-border-radius:20px;
-}
-
-/* SIDEBAR */
-.sidebar{
-width:220px;
-background:#fdf8b9;
-color:rgb(255, 255, 255);
-position:fixed;
-height:100vh;
-padding:20px;
-}
-
-.sidebar h2{
-margin-bottom:20px;
-}
-
-.sidebar a{
-display:block;
-color:rgb(255, 255, 255);
-text-decoration:none;
-margin:10px 0;
-transition:0.3s;
-}
-
-.sidebar a:hover{
-color:#000000;
-}
-
-.main{
-margin-left:240px;
-}
-
-/* BANNER */
-.banner{
-height:260px;
-background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:34px;
-font-weight:600;
-text-shadow:0 2px 8px rgba(0,0,0,0.5);
-}
-
-/* PRODUTOS */
-.categorias{
-padding:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-}
-
-.price{
-color:#1976d2;
-font-weight:bold;
-}
-
-button{
-background:#affaff;
-color:rgb(255, 255, 255);
-border:none;
-padding:10px;
-width:100%;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:#56edf8;
-}
-
-footer{
-background:#0d47a1;
-color:white;
-text-align:center;
-padding:20px;
-}
-</style>
 </head>
-
 <body>
 
+
 <header class="top-header">
+    <div class="logo-area">
+        <h1>Ocean Style</h1>
+        <p>Moda com estilo oceano</p>
+    </div>
+   
+    <nav class="top-menu">
+        <a href="#novidades">Novidades</a>
+        <a href="#biquinis">Biquínis</a>
+        <a href="#roupas">Roupas</a>
+        <a href="#acessorios">Acessórios</a>
+    </nav>
 
-<div class="logo-area">
-<h1>Ocean Style</h1>
-<p>Moda com estilo oceano</p>
-</div>
 
-<nav class="top-menu">
-<a href="#inicio" target="_blank">Início</a>
-<a href="#produtos" target="_blank">Produtos</a>
-<a href="#categorias" target="_blank">Categorias</a>
-<a href="#contato" target="_blank">Contato</a>
-</nav>
-
-<div class="top-actions">
-<input type="text" placeholder="Buscar..." class="search">
-<div class="cart-icon" onclick="addCart()">
-Carrinho <span id="cart">0</span>
-</div>
-</div>
-
+    <div class="top-actions">
+        <input type="text" placeholder="Buscar..." class="search">
+        <div class="cart-icon">
+            <p>Carrinho</p><span id="cart">0</span>
+        </div>
+    </div>
 </header>
 
-<div class="sidebar">
-<h2>Categorias</h2>
-<a href="#" target="_blank">Camisetas</a>
-<a href="#" target="_blank">Calças</a>
-<a href="#" target="_blank">Vestidos</a>
-<a href="#" target="_blank">Moletons</a>
-</div>
-
-<div class="main">
 
 <section class="banner">
-Coleção Verão 2026
+    <p>Coleção Verão 2026</p>
 </section>
 
+
+<!--2-->
 <section class="categorias" id="produtos">
-<h2>Produtos</h2>
+    <h2>Produtos</h2>
+   
+    <!--Novidades-->
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+            <h3>Camiseta Básica</h3>
+            <p class="price">R$ 59,90</p>
+            <!--Carrinho-->
+            <button onclick="addCart()">Comprar</button>
+        </div>
+       
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+            <h3>Calça Jeans</h3>
+            <p class="price">R$ 129,90</p>
+            <!--Carrinho-->
+            <button onclick="addCart()">Comprar</button>
+        </div>
 
-<div class="grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-<h3>Camiseta Básica</h3>
-<p class="price">R$ 59,90</p>
-<button onclick="addCart()">Comprar</button>
-</div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b">
+            <h3>Vestido Verão</h3>
+            <p class="price">R$ 99,90</p>
+            <!--Carrinho-->
+            <button onclick="addCart()">Comprar</button>
+        </div>
+       
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7">
+            <h3>Short Praia</h3>
+            <p class="price">R$ 79,90</p>
+            <!--Carrinho-->
+            <button onclick="addCart()">Comprar</button>
+        </div>
+       
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+            <h3>Moletom</h3>
+            <p class="price">R$ 149,90</p>
+            <!--Carrinho-->
+            <button onclick="addCart()">Comprar</button>
+        </div>
+       
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520975922326-8b456906c813">
+            <h3>Jaqueta</h3>
+            <p class="price">R$ 189,90</p>
+            <!--Carrinho-->
+            <button onclick="addCart()">Comprar</button>
+        </div>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
-<h3>Calça Jeans</h3>
-<p class="price">R$ 129,90</p>
-<button onclick="addCart()">Comprar</button>
-</div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b">
-<h3>Vestido Verão</h3>
-<p class="price">R$ 99,90</p>
-<button onclick="addCart()">Comprar</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7">
-<h3>Short Praia</h3>
-<p class="price">R$ 79,90</p>
-<button onclick="addCart()">Comprar</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-<h3>Moletom</h3>
-<p class="price">R$ 149,90</p>
-<button onclick="addCart()">Comprar</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975922326-8b456906c813">
-<h3>Jaqueta</h3>
-<p class="price">R$ 189,90</p>
-<button onclick="addCart()">Comprar</button>
-</div>
-
-</div>
+<!--2-->
 </section>
 
-<footer>
-2026 Ocean Style - Empresa fictícia
-</footer>
 
-</div>
+<footer>Ocean Style - Criado por Intocáveis &copy; 2026</footer>
+
 
 <script>
 let total = 0;
 
+
 function addCart(){
-total++;
-document.getElementById("cart").innerText = total;
-}
+    total++;
+    document.getElementById("cart").innerText = total;
+};
 </script>
+
 
 </body>
 </html>
